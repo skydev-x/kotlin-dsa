@@ -1,19 +1,16 @@
 package org.example
 
-import org.example.graph.Graph
-import org.example.graph.bfs
-import org.example.graph.dfs
+import org.example.set.DisjointSet
 
 fun main() {
-
-  val graph = Graph()
-  graph.addEdge(1, 2)
-  graph.addEdge(2, 3)
-  graph.addEdge(1, 3)
-  graph.addEdge(3, 4)
-  graph.addEdge(3, 5)
-  graph.addEdge(1, 0)
-  graph.printGraph()
-  graph.dfs(3)
-  graph.bfs(3)
+  val ds = DisjointSet(5)
+  ds.union(2, 3)
+  ds.union(1, 4)
+  ds.union(0, 4)
+  // ds.union(3, 1)
+  println("parent of 0 ${ds.find(0)}")
+  println("parent of 1 ${ds.find(1)}")
+  println("parent of 2 ${ds.find(2)}")
+  println("parent of 3 ${ds.find(3)}")
+  println("parent of 4 ${ds.find(4)}")
 }

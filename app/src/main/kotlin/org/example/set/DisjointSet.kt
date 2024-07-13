@@ -8,7 +8,6 @@ class DisjointSet(size: Int) {
     val pa = find(a)
     val pb = find(b)
     if (pa == pb) return
-
     parent[pb] = a
   }
 
