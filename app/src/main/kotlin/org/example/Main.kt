@@ -7,7 +7,7 @@ fun main() {
   ds.union(2, 3)
   ds.union(1, 4)
   ds.union(0, 4)
-  // ds.union(3, 1)
+  ds.union(3, 1)
   println("parent of 0 ${ds.find(0)}")
   println("parent of 1 ${ds.find(1)}")
   println("parent of 2 ${ds.find(2)}")
